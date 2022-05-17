@@ -1,0 +1,323 @@
+* {
+  font-family: "Roboto";
+}
+
+body {
+  background-color: Grey;
+  padding-top: 2vh;
+}
+
+.container {
+  width: 80%;
+  height: ;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(207, 205, 205);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 120px repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.head {
+  grid-column: 4/-1;
+  grid-row: 1/2;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.head1 {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+.head2 {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+.head1,
+.head2 {
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.head1 > #search {
+  justify-self: end;
+  align-self: center;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.head1 > input[name="search"] {
+  grid-column: 2/9;
+  height: 1.5vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  background-color: rgb(235, 233, 233);
+  border: none;
+  align-self: center;
+}
+
+.head1 > #alert {
+  grid-column: 10/10;
+  align-self: center;
+  justify-self: end;
+}
+
+.head1 > img {
+  grid-column: 11/12;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.head1 > h5 {
+  grid-column: 12/14;
+  margin: 0;
+  align-self: center;
+}
+
+.head2 > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: center;
+  grid-column: 1/2;
+  justify-self: end;
+}
+
+.head2 > div {
+  box-sizing: border-box;
+  grid-column: 2/5;
+  padding-left: 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+}
+
+.head2 > div > h6, .head2 > div > h4 {
+  padding: 0;
+  margin: 0;
+}
+
+
+.head2 > ul {
+  grid-column: 8/11;
+  align-self: center;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.head2 > ul > li {
+  justify-self: center;
+  background-color: rgb(12, 142, 202);
+  padding: 5px 20px;
+  border-radius: 30px;
+  margin: 0;
+}
+
+.head2 > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.sidebar {
+  background: rgb(12, 142, 202);
+  grid-row: 1/-1;
+  grid-column: 1/4;
+  padding: 10px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 2.5vw 1fr;
+  grid-template-rows: 2.5vw;
+  margin-bottom: 30px;
+  justify-content: left;
+  gap: 5px;
+  
+}
+
+.dashboard > span {
+  grid-column: 1/2;
+  align-self: center;
+  padding: 0;
+}
+
+.dashboard > h3 {
+  grid-column: 2/3;
+  align-self: center;
+  color: #fff;
+}
+
+.menu,
+.support {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.menu > a,
+.support > a {
+  display: grid;
+  grid-template-columns: 2vw 1fr;
+  grid-auto-flow: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content {
+  grid-column: 4/-1;
+  grid-row: 2/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(200px, 1fr);
+  gap: 15px;
+  padding: 0px 10px 30px 10px;
+}
+
+.projects{
+  grid-column: 1/4;
+}
+
+.projects > h5{
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+}
+
+.project-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.project{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-left: 10px solid orange;
+  border-radius: 10px;
+}
+
+
+
+.project > h5{
+  margin: 0;
+}
+.project > p{
+  margin: 0;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.project > div{
+  margin-top: 30px;
+  justify-self: right;
+}
+
+.news{
+  grid-column: 4/5;
+}
+
+.news > h5{
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+}
+
+.news > .information{
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.news-info > h6{
+  margin: 0;
+  padding: 0;
+}
+
+.news-info > p{
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.trending-profile{
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.profile{
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-auto-flow: row;
+}
+
+.profile > img{
+  grid-column: 1/2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-self: left;
+  
+}
+
+.personal{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: left;
+}
+
+.personal > h6{
+  margin: 0;
+  padding: 0;
+  font-size: 9px;
+  align-self: flex-end;
+
+}
+
+.personal > p{
+  margin: 0;
+  padding: 0;
+  font-size: 9px;
+  align-self: flex-start;
+
+}
